@@ -1,0 +1,32 @@
+/** RESET **/
+@import 'base/normalize';
+
+/** BASE **/
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/colors';
+@import 'base/fonts';
+@import 'base/utilities';
+@import 'base/text';
+
+/** CONFIG **/
+// body { font-size:10px; }
+.wrapper { width:100%; margin:0 auto; }
+.content { 
+    width:100%; max-width:$text_max_width; 
+    &.wide { max-width:$wide_max_width; }
+    &.narrow { max-width:$narrow_max_width; }
+}
+@import 'base/sizespaces';
+
+/** COMPONENTS **/
+// @import 'components/buttons';
+// @import 'components/cards';
+// @import 'components/forms';
+
+/** LAYOUT **/
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'desktop';
+

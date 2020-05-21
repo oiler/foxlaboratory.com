@@ -1,0 +1,38 @@
+/* Media queries */
+@mixin small-breakpoint-min {
+    @media only screen and (min-width: $device_mobile) {
+      @content;
+    } 
+  }  
+@mixin small-breakpoint-max {
+  @media only screen and (max-width: $device_mobile) {
+    @content;
+  } 
+}  
+
+@mixin medium-breakpoint-only {
+  @media only screen and (min-width: $device_tablet) and (max-width: $device_desktop) {
+    @content;
+  } 
+}
+@mixin medium-breakpoint-min {
+  @media only screen and (min-width: $device_tablet) {
+    @content;
+  } 
+}
+@mixin medium-breakpoint-max {
+  @media only screen and (max-width: $device_tablet) {
+    @content;
+  } 
+}
+
+@mixin large-breakpoint-min {
+  @media only screen and (min-width: $device_desktop) {
+    @content;
+  }
+}
+@mixin large-breakpoint-max {
+  @media only screen and (max-width: $device_desktop) {
+    @content;
+  }
+}

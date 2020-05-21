@@ -1,0 +1,102 @@
+/* REGULAR */
+$color_bg: $gray_200;
+$color_tx: $black;
+/* INVERTED */
+// $color_bg: $black;
+// $color_tx: $gray_200;
+
+header {
+    display: block;
+    width: 100%;
+    background-color: $color_bg;
+    margin: 0 auto;
+    position: relative;
+    z-index:10;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+        padding-top: 8px;
+        padding-right: 16px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+        width: 100%;
+        max-width:$wide_max_width;
+        border-bottom:2px solid $color_tx;
+    }
+    a { display:inline-block; }
+    h1 { display:none; }
+    .logo {
+        order:0;
+        // display:inline-block;
+        margin-right:$bv_1;
+        flex-basis: 75%;
+        // vertical-align:baseline;
+        // a { display:inline-block; }
+        img { width:200px; height:50px; }
+    }
+    nav {
+        order:2;
+        // align-items:center;
+        flex-basis: 100%;
+        display:flex;
+        flex-direction: column;
+        margin-top:28px;
+        a {
+            font-family: $font_text;
+            font-size: $font_size;
+            text-align: right;
+            color:$color_tx;
+            margin-left:0;
+            margin-right:2px;
+            margin-bottom:32px;
+        }
+    }
+    .menu {
+        order:1;
+        flex-basis:32px;
+        align-self:flex-end;
+        color:$color_tx;
+        padding:12px 16px;
+        border:2px solid $color_tx;
+        margin:4px 0;
+        .fill-current { fill: currentColor!important;}
+        svg { width:$bv_1; height:$bv_1; }
+    }
+    .open { display:inherit; }
+    @include small-breakpoint-max {
+        nav { 
+            display:none;
+        }
+    }
+    @include medium-breakpoint-min {
+        
+    }
+    @include large-breakpoint-min {
+        
+    }
+    @include small-breakpoint-min {
+        .container {
+            border-bottom:none;
+        }
+        .logo { flex-basis:40%; }
+        nav { 
+            order:1;
+            align-items:center;
+            flex-basis:auto;
+            display:inherit;
+            flex-direction:row;
+            margin-top:0;
+            a {
+                margin:10px;
+            }
+        }
+        .menu { display:none; order:2; }
+    }
+}
+

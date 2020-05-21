@@ -1,0 +1,14 @@
+@include medium-breakpoint-min {
+    .container {
+        padding-left: 20px; 
+        padding-right: 20px;
+    }
+}
+@include large-breakpoint-min {
+
+    .container {
+        padding-left: 80px; 
+        padding-right: 80px;
+    }
+
+}
